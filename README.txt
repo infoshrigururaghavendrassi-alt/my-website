@@ -1,17 +1,1223 @@
-No.1 Agro Clean Website
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>No.1 Agro Clean | Seeds & Grains Cleaning in Hubli</title>
+<meta name="description" content="No.1 Agro Clean provides cleaning, grading, destoning, processing, and packing services for all types of seeds and grains in Hubli. Affordable job work for farmers, traders, and wholesalers.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dark-green: #1a3a2a;
+    --mid-green: #2d5a3d;
+    --light-green: #4a8a5e;
+    --gold: #c8932a;
+    --gold-light: #e8b84b;
+    --cream: #f8f3e8;
+    --warm-white: #fdfaf4;
+    --text-dark: #1a1a1a;
+    --text-mid: #3d3d3d;
+    --text-muted: #6b6b6b;
+    --border: rgba(200,147,42,0.2);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--warm-white);
+    color: var(--text-dark);
+    line-height: 1.6;
+  }
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(26,58,42,0.97);
+    backdrop-filter: blur(10px);
+    padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 68px;
+    border-bottom: 1px solid rgba(200,147,42,0.3);
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 12px;
+    text-decoration: none;
+  }
+  .nav-logo-circle {
+    width: 40px; height: 40px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column;
+  }
+  .nav-logo-circle span:first-child { font-size: 8px; color: var(--gold); font-family: 'Playfair Display', serif; font-weight: 700; }
+  .nav-logo-circle span:last-child { font-size: 6px; color: var(--gold-light); letter-spacing: 0.5px; text-transform: uppercase; }
+  .nav-brand { color: #fff; font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600; }
+  .nav-brand small { display: block; font-family: 'DM Sans', sans-serif; font-size: 0.6rem; color: var(--gold-light); letter-spacing: 2px; text-transform: uppercase; font-weight: 400; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold-light); }
+  .nav-cta {
+    background: var(--gold);
+    color: var(--dark-green) !important;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    font-weight: 600 !important;
+  }
+  .nav-cta:hover { background: var(--gold-light) !important; color: var(--dark-green) !important; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
 
-Files included:
-- index.html
-- style.css
-- assets/ folder with optimized images
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background: var(--dark-green);
+    position: relative;
+    display: flex; align-items: center;
+    overflow: hidden;
+    padding-top: 68px;
+  }
+  .hero-bg-pattern {
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(ellipse at 70% 50%, rgba(200,147,42,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 20% 80%, rgba(74,138,94,0.15) 0%, transparent 50%);
+  }
+  .hero-grain-overlay {
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='10' cy='10' r='1' fill='rgba(200,147,42,0.06)'/%3E%3Ccircle cx='30' cy='30' r='1.5' fill='rgba(200,147,42,0.04)'/%3E%3Ccircle cx='50' cy='10' r='1' fill='rgba(200,147,42,0.06)'/%3E%3Ccircle cx='10' cy='50' r='1' fill='rgba(200,147,42,0.04)'/%3E%3Ccircle cx='50' cy='50' r='1.5' fill='rgba(200,147,42,0.05)'/%3E%3C/svg%3E");
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    max-width: 1200px; margin: 0 auto;
+    padding: 4rem 2rem;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(200,147,42,0.15);
+    border: 1px solid rgba(200,147,42,0.4);
+    border-radius: 20px;
+    padding: 0.3rem 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  .hero-badge-dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.6;transform:scale(1.2)} }
+  .hero-badge span { font-size: 0.75rem; color: var(--gold-light); letter-spacing: 1px; text-transform: uppercase; font-weight: 500; }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+  .hero-title em { color: var(--gold-light); font-style: italic; }
+  .hero-subtitle {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 0.75rem;
+    line-height: 1.7;
+  }
+  .hero-price {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-bottom: 2rem;
+  }
+  .hero-price-tag {
+    background: var(--gold);
+    color: var(--dark-green);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.35rem 1rem;
+    border-radius: 4px;
+  }
+  .hero-price-sub { color: rgba(255,255,255,0.55); font-size: 0.82rem; }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--gold);
+    color: var(--dark-green);
+    padding: 0.75rem 1.75rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .btn-outline {
+    background: transparent;
+    color: #fff;
+    padding: 0.75rem 1.75rem;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.3);
+    transition: all 0.2s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold-light); }
+  .hero-contact {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .hero-contact p { color: rgba(255,255,255,0.45); font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.5rem; }
+  .hero-contact a {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--gold-light); font-weight: 500; font-size: 0.95rem;
+    text-decoration: none;
+    margin-right: 1.5rem;
+  }
+  .hero-image-side { position: relative; }
+  .hero-card-main {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(200,147,42,0.3);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+  .hero-card-main img { width: 100%; height: 320px; object-fit: cover; display: block; }
+  .hero-img-caption {
+    background: rgba(26,58,42,0.95);
+    padding: 1rem 1.25rem;
+    border-top: 1px solid rgba(200,147,42,0.2);
+  }
+  .hero-img-caption p { color: rgba(255,255,255,0.8); font-size: 0.82rem; }
+  .hero-img-caption strong { color: var(--gold-light); }
+  .hero-card-float {
+    position: absolute;
+    bottom: -20px; right: -20px;
+    background: var(--gold);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    min-width: 160px;
+  }
+  .hero-card-float .big-num { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--dark-green); line-height: 1; }
+  .hero-card-float p { font-size: 0.72rem; color: var(--dark-green); font-weight: 500; margin-top: 4px; }
+  .hero-stats {
+    display: flex; gap: 1.5rem; margin-top: 2.5rem;
+  }
+  .stat-item { text-align: center; }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--gold-light); font-weight: 700; line-height: 1; }
+  .stat-label { font-size: 0.7rem; color: rgba(255,255,255,0.45); letter-spacing: 0.5px; margin-top: 2px; }
+  .stat-divider { width: 1px; background: rgba(255,255,255,0.1); }
 
-How to upload to GitHub:
-1. Open your GitHub repository: my-website
-2. Upload/replace index.html and style.css
-3. Upload the full assets folder
-4. Click Commit changes
-5. Netlify will deploy automatically in 1-2 minutes
+  /* SECTIONS */
+  section { padding: 5rem 2rem; }
+  .container { max-width: 1200px; margin: 0 auto; }
+  .section-label {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+  .section-label::before {
+    content: '';
+    display: block; width: 24px; height: 1.5px;
+    background: var(--gold);
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 700;
+    color: var(--dark-green);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  .section-title span { color: var(--gold); }
+  .section-body { color: var(--text-mid); font-size: 1rem; line-height: 1.8; max-width: 600px; }
 
-Important:
-- Do not upload the ZIP directly to GitHub.
-- Extract the ZIP first, then upload the files and assets folder.
+  /* WELCOME */
+  .welcome { background: var(--warm-white); }
+  .welcome-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+  .welcome-images { position: relative; }
+  .welcome-img-main { border-radius: 16px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+  .welcome-img-main img { width: 100%; height: 380px; object-fit: cover; }
+  .welcome-img-float {
+    position: absolute; bottom: -24px; right: -24px;
+    width: 160px; height: 160px;
+    border-radius: 16px; overflow: hidden;
+    border: 4px solid var(--warm-white);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  }
+  .welcome-img-float img { width: 100%; height: 100%; object-fit: cover; }
+  .welcome-features {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+    margin-top: 2rem;
+  }
+  .feature-chip {
+    display: flex; align-items: center; gap: 8px;
+    background: rgba(26,58,42,0.05);
+    border: 1px solid rgba(26,58,42,0.1);
+    border-radius: 8px;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--dark-green);
+  }
+  .feature-chip-dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+
+  /* SERVICES */
+  .services { background: var(--dark-green); }
+  .services .section-title { color: #fff; }
+  .services .section-body { color: rgba(255,255,255,0.65); }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem; margin-top: 3rem;
+  }
+  .service-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(200,147,42,0.2);
+    border-radius: 14px;
+    padding: 1.75rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .service-card:hover { background: rgba(255,255,255,0.07); border-color: rgba(200,147,42,0.4); transform: translateY(-4px); }
+  .service-card:hover::before { opacity: 1; }
+  .service-icon {
+    width: 48px; height: 48px;
+    background: rgba(200,147,42,0.15);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+  .service-card h3 { color: var(--gold-light); font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
+  .service-card p { color: rgba(255,255,255,0.6); font-size: 0.875rem; line-height: 1.7; }
+
+  /* WHY CHOOSE */
+  .why { background: var(--cream); }
+  .why-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem; margin-top: 3rem;
+  }
+  .why-card {
+    background: white;
+    border-radius: 14px;
+    padding: 1.75rem;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    transition: all 0.3s;
+  }
+  .why-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+  .why-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: rgba(200,147,42,0.15);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .why-card h3 { color: var(--dark-green); font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem; }
+  .why-card p { color: var(--text-muted); font-size: 0.85rem; line-height: 1.7; }
+
+  /* STORY */
+  .story { background: var(--warm-white); }
+  .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .story-image { border-radius: 16px; overflow: hidden; box-shadow: 0 16px 50px rgba(0,0,0,0.12); }
+  .story-image img { width: 100%; height: 450px; object-fit: cover; }
+  .timeline { margin: 2rem 0; }
+  .timeline-item {
+    display: flex; gap: 1rem;
+    padding-bottom: 1.5rem;
+    position: relative;
+  }
+  .timeline-item:not(:last-child)::before {
+    content: '';
+    position: absolute; left: 15px; top: 32px; bottom: 0;
+    width: 1px; background: var(--border);
+  }
+  .timeline-dot {
+    width: 30px; height: 30px; flex-shrink: 0;
+    background: var(--dark-green);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.65rem; color: var(--gold); font-weight: 700;
+    position: relative; z-index: 1;
+  }
+  .timeline-text { padding-top: 4px; }
+  .timeline-text strong { display: block; color: var(--gold); font-size: 0.75rem; letter-spacing: 1px; margin-bottom: 2px; }
+  .timeline-text p { color: var(--text-mid); font-size: 0.875rem; line-height: 1.6; }
+
+  /* CUSTOMERS */
+  .customers { background: var(--dark-green); }
+  .customers .section-title { color: #fff; }
+  .customers-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem; margin-top: 3rem;
+  }
+  .customer-chip {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(200,147,42,0.25);
+    border-radius: 10px;
+    padding: 1.25rem;
+    text-align: center;
+    transition: all 0.3s;
+  }
+  .customer-chip:hover { background: rgba(200,147,42,0.15); border-color: var(--gold); }
+  .customer-icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+  .customer-chip p { color: rgba(255,255,255,0.8); font-size: 0.82rem; font-weight: 500; }
+
+  /* GALLERY */
+  .gallery { background: var(--cream); }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+  .gallery-item {
+    border-radius: 12px; overflow: hidden;
+    position: relative; cursor: pointer;
+  }
+  .gallery-item:first-child { grid-column: span 2; }
+  .gallery-item img {
+    width: 100%; height: 240px; object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+  }
+  .gallery-item:first-child img { height: 300px; }
+  .gallery-item:hover img { transform: scale(1.04); }
+  .gallery-label {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(26,58,42,0.9));
+    padding: 1.5rem 1rem 0.75rem;
+    color: rgba(255,255,255,0.9);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  /* TRUST */
+  .trust { background: var(--warm-white); }
+  .trust-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .trust-badges {
+    display: flex; flex-wrap: wrap; gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+  .trust-badge {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 0.82rem;
+    color: var(--dark-green);
+    font-weight: 500;
+  }
+  .trust-badge-icon { font-size: 1rem; }
+  .trust-details {
+    background: var(--dark-green);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(200,147,42,0.2);
+  }
+  .trust-detail-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .trust-detail-row:last-child { border-bottom: none; }
+  .trust-detail-label { color: rgba(255,255,255,0.45); font-size: 0.8rem; }
+  .trust-detail-val { color: var(--gold-light); font-size: 0.875rem; font-weight: 500; text-align: right; max-width: 60%; }
+
+  /* CTA */
+  .cta-section {
+    background: var(--gold);
+    padding: 4rem 2rem;
+  }
+  .cta-inner {
+    max-width: 900px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center;
+  }
+  .cta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    color: var(--dark-green);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .cta-sub { color: rgba(26,58,42,0.7); font-size: 0.95rem; }
+  .cta-actions { display: flex; flex-direction: column; gap: 0.75rem; }
+  .btn-dark {
+    background: var(--dark-green);
+    color: #fff;
+    padding: 0.75rem 1.75rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-flex; align-items: center; gap: 8px;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+  .btn-dark:hover { background: var(--mid-green); }
+  .cta-location {
+    display: flex; align-items: flex-start; gap: 6px;
+    font-size: 0.8rem; color: rgba(26,58,42,0.7);
+    margin-top: 0.25rem;
+  }
+
+  /* CONTACT */
+  .contact { background: var(--cream); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+  .contact-form {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  }
+  .form-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--dark-green); margin-bottom: 1.5rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-group { margin-bottom: 1rem; }
+  .form-group label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--dark-green); margin-bottom: 0.4rem; letter-spacing: 0.3px; }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 0.65rem 0.9rem;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    background: var(--warm-white);
+    transition: border-color 0.2s;
+    outline: none;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(200,147,42,0.1);
+  }
+  .form-group textarea { resize: vertical; min-height: 90px; }
+  .form-submit {
+    width: 100%;
+    padding: 0.85rem;
+    background: var(--dark-green);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .form-submit:hover { background: var(--mid-green); }
+  .contact-info { padding-top: 0.5rem; }
+  .info-card {
+    background: var(--dark-green);
+    border-radius: 14px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(200,147,42,0.2);
+  }
+  .info-card-label { color: rgba(255,255,255,0.45); font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 0.4rem; }
+  .info-card-val { color: #fff; font-size: 0.95rem; font-weight: 500; }
+  .info-card-val a { color: var(--gold-light); text-decoration: none; }
+  .info-card-val a:hover { text-decoration: underline; }
+  .kannada-block {
+    background: rgba(26,58,42,0.06);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 8px 8px 0;
+    padding: 1rem 1.25rem;
+    margin-top: 1.5rem;
+  }
+  .kannada-block p { font-size: 0.9rem; color: var(--dark-green); line-height: 1.8; }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark-green);
+    padding: 3rem 2rem 1.5rem;
+    border-top: 1px solid rgba(200,147,42,0.2);
+  }
+  .footer-grid {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 1.5rem;
+  }
+  .footer-about p { color: rgba(255,255,255,0.55); font-size: 0.875rem; line-height: 1.8; margin-top: 1rem; }
+  .footer-logo {
+    display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;
+  }
+  .footer-logo-circle {
+    width: 36px; height: 36px; border: 1.5px solid var(--gold);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-direction: column;
+  }
+  .footer-logo-circle span:first-child { font-size: 7px; color: var(--gold); font-family: 'Playfair Display', serif; font-weight: 700; }
+  .footer-logo-circle span:last-child { font-size: 5px; color: var(--gold-light); letter-spacing: 0.3px; }
+  .footer-brand-name { color: #fff; font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; }
+  .footer-col h4 { color: var(--gold-light); font-size: 0.8rem; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; margin-bottom: 1rem; }
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: 0.5rem; }
+  .footer-links a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--gold-light); }
+  .footer-contact-item { display: flex; flex-direction: column; margin-bottom: 0.75rem; }
+  .footer-contact-item span { color: rgba(255,255,255,0.4); font-size: 0.7rem; letter-spacing: 0.5px; }
+  .footer-contact-item a, .footer-contact-item p { color: rgba(255,255,255,0.7); font-size: 0.82rem; text-decoration: none; margin: 0; }
+  .footer-bottom { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 0.75rem; }
+  .gstin { color: rgba(255,255,255,0.35); font-size: 0.72rem; }
+
+  /* WHATSAPP FLOAT */
+  .wa-float {
+    position: fixed; bottom: 24px; right: 24px; z-index: 999;
+    width: 56px; height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all 0.2s;
+  }
+  .wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.5); }
+
+  /* MOBILE NAV MENU */
+  .mobile-menu {
+    display: none;
+    position: fixed; top: 68px; left: 0; right: 0; z-index: 99;
+    background: rgba(26,58,42,0.98);
+    padding: 1rem 2rem 2rem;
+    border-bottom: 1px solid rgba(200,147,42,0.2);
+    flex-direction: column; gap: 0;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    display: block;
+  }
+  .mobile-menu a:last-child { border-bottom: none; color: var(--gold-light); font-weight: 600; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero-content { grid-template-columns: 1fr; }
+    .hero-image-side { display: none; }
+    .welcome-grid { grid-template-columns: 1fr; }
+    .welcome-images { display: none; }
+    .story-grid { grid-template-columns: 1fr; }
+    .story-image { display: none; }
+    .trust-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; }
+    .gallery-item:first-child { grid-column: span 2; }
+    .cta-inner { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 500px) {
+    section { padding: 3.5rem 1.25rem; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .gallery-item:first-child { grid-column: span 1; }
+  }
+
+  /* ANIMATIONS */
+  .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="nav-logo">
+    <div class="nav-logo-circle">
+      <span>No.1</span>
+      <span>AGRO</span>
+    </div>
+    <div class="nav-brand">
+      Agro Clean
+      <small>Shri Gururaghavendra SSI</small>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" onclick="closeMenu()">Home</a>
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#gallery" onclick="closeMenu()">Gallery</a>
+  <a href="#contact" onclick="closeMenu()">Contact Us →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-grain-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        <span>APMC Yard, Amargol, Hubli</span>
+      </div>
+      <h1 class="hero-title">
+        No.1 Agro Clean<br>
+        <em>Cleaning & Processing</em><br>
+        of All Seeds & Grains
+      </h1>
+      <p class="hero-subtitle">Professional seed and grain cleaning, grading, destoning, processing, and packing services for farmers, traders, wholesalers, and businesses across Hubli.</p>
+      <div class="hero-price">
+        <div class="hero-price-tag">Starting ₹150/quintal</div>
+        <span class="hero-price-sub">Small & bulk quantities accepted</span>
+      </div>
+      <div class="hero-btns">
+        <a href="tel:+918880669590" class="btn-primary">📞 Call Now</a>
+        <a href="#services" class="btn-outline">View Services →</a>
+      </div>
+      <div class="hero-contact">
+        <p>Reach Us Directly</p>
+        <a href="tel:+918880669590">+91 8880669590</a>
+        <a href="tel:+919986779287">+91 9986779287</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">2025</div>
+          <div class="stat-label">Established</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num">₹150</div>
+          <div class="stat-label">Per Quintal</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num">All</div>
+          <div class="stat-label">Seed Types</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num">APMC</div>
+          <div class="stat-label">Yard Based</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image-side">
+      <div class="hero-card-main">
+        <img src="Grains2.jpeg" alt="Various seeds and grains processed at No.1 Agro Clean" onerror="this.style.background='#2d5a3d';this.style.height='320px';this.alt='No.1 Agro Clean'">
+        <div class="hero-img-caption">
+          <p><strong>No.1 Agro Clean</strong> — C-22, APMC Yard, Amargol, Hubli</p>
+          <p>GSTIN: 29ACGPU3065M1ZX &nbsp;·&nbsp; FSSAI Licensed</p>
+        </div>
+      </div>
+      <div class="hero-card-float">
+        <div class="big-num">₹150</div>
+        <p>Per Quintal Starting</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WELCOME -->
+<section class="welcome" id="about">
+  <div class="container">
+    <div class="welcome-grid">
+      <div class="welcome-images fade-in">
+        <div class="welcome-img-main">
+          <img src="WhatsApp_Image_2026-05-21_at_11_00_51_AM.jpeg" alt="No.1 Agro Clean facility exterior" onerror="this.style.background='#2d5a3d';this.style.height='380px'">
+        </div>
+        <div class="welcome-img-float">
+          <img src="grains.jpeg" alt="Clean grains ready for market" onerror="this.style.background='#c8932a'">
+        </div>
+      </div>
+      <div class="fade-in">
+        <div class="section-label">About Us</div>
+        <h2 class="section-title">Rooted in Quality,<br><span>Growing with Care</span></h2>
+        <p class="section-body">No.1 Agro Clean provides reliable job work services for cleaning and processing all types of seeds and grains. We use advanced machines — destoner, cleaner, and grading machines — to remove dust, stones, impurities, and unwanted particles.</p>
+        <p class="section-body" style="margin-top:0.75rem;">Our services support farmers, traders, wholesalers, and small businesses by helping them get cleaner, better-quality, and market-ready goods. We accept both small and bulk quantity work.</p>
+        <div class="welcome-features">
+          <div class="feature-chip"><div class="feature-chip-dot"></div>Small Batches Accepted</div>
+          <div class="feature-chip"><div class="feature-chip-dot"></div>Advanced Machines</div>
+          <div class="feature-chip"><div class="feature-chip-dot"></div>FSSAI Licensed</div>
+          <div class="feature-chip"><div class="feature-chip-dot"></div>Fair & Honest Pricing</div>
+          <div class="feature-chip"><div class="feature-chip-dot"></div>APMC Yard Located</div>
+          <div class="feature-chip"><div class="feature-chip-dot"></div>All Grain Types</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-label" style="color:var(--gold-light)">What We Do</div>
+      <h2 class="section-title">Our Job Work <span style="color:var(--gold-light)">Services</span></h2>
+      <p class="section-body">Complete cleaning and processing support for all types of seeds and grains.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <div class="service-icon">🌾</div>
+        <h3>Seed Cleaning</h3>
+        <p>We clean different types of seeds by removing dust, stones, mud particles, damaged particles, and unwanted impurities for better market presentation.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">🌽</div>
+        <h3>Grain Cleaning</h3>
+        <p>We provide grain cleaning services to improve the quality, appearance, and market value of grains — removing all unwanted particles.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">⚙️</div>
+        <h3>Destoning</h3>
+        <p>Our destoner machine removes stones and heavier particles from seeds and grains, improving quality and helping make goods market-ready.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">📊</div>
+        <h3>Grading</h3>
+        <p>We grade seeds and grains based on size and quality, giving a more uniform, better-looking final output that buyers trust more.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">🏭</div>
+        <h3>Processing & Packing</h3>
+        <p>We process seeds and grains as per customer requirements, focusing on quality, better appearance, and market-ready finishing — with packing support.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">📦</div>
+        <h3>Small Batch Job Work</h3>
+        <p>One of our key strengths — we accept small quantity and small batch work, unlike many units that require large minimums. Every farmer matters.</p>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:2.5rem;" class="fade-in">
+      <div style="background:rgba(200,147,42,0.1); border:1px solid rgba(200,147,42,0.3); border-radius:12px; padding:1.25rem 2rem; display:inline-block;">
+        <p style="color:rgba(255,255,255,0.55); font-size:0.8rem; margin-bottom:0.25rem;">Job Work Pricing Starts From</p>
+        <div style="color:var(--gold-light); font-family:'Playfair Display',serif; font-size:2rem; font-weight:700;">₹150 <span style="font-size:1rem; font-weight:400;">per quintal</span></div>
+        <p style="color:rgba(255,255,255,0.45); font-size:0.75rem; margin-top:0.25rem;">Call for exact pricing based on type & quantity</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="why">
+  <div class="container">
+    <div class="fade-in" style="max-width:700px">
+      <div class="section-label">Why Choose Us</div>
+      <h2 class="section-title">Why Customers Trust<br><span>No.1 Agro Clean</span></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-in">
+        <div class="why-num">01</div>
+        <h3>Less Shortage-Focused Processing</h3>
+        <p>We focus on careful and honest processing to reduce unnecessary shortage and give customers better usable output.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-num">02</div>
+        <h3>Small Quantity Accepted</h3>
+        <p>We support small farmers and small traders by accepting small batches — you don't need a large minimum quantity.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-num">03</div>
+        <h3>Advanced Machines</h3>
+        <p>Our facility uses destoner, cleaner, and grading machines for better cleaning, grading, and more consistent output.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-num">04</div>
+        <h3>Affordable Pricing</h3>
+        <p>Our prices start from less than ₹150 per quintal, making professional quality processing affordable for all.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-num">05</div>
+        <h3>Better Market Value</h3>
+        <p>Cleaned and graded seeds and grains look better and help customers get better prices in the market.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-num">06</div>
+        <h3>Honest Service</h3>
+        <p>We believe in transparent work, fair pricing, and long-term customer relationships built on trust.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR STORY -->
+<section class="story">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-image fade-in">
+        <img src="WhatsApp_Image_2026-05-21_at_11_00_51_AM.jpeg" alt="No.1 Agro Clean - Our Facility" onerror="this.style.background='#2d5a3d'; this.style.height='450px'">
+      </div>
+      <div class="fade-in">
+        <div class="section-label">Our Story</div>
+        <h2 class="section-title">A Business Built on<br><span>Hard Work & Faith</span></h2>
+        <p class="section-body">The journey of No.1 Agro Clean is the story of hard work, dedication, and faith in Shri Guru Raghavendra Swamy.</p>
+        <div class="timeline" style="margin-top:1.75rem;">
+          <div class="timeline-item">
+            <div class="timeline-dot">09</div>
+            <div class="timeline-text">
+              <strong>2009 — The Beginning</strong>
+              <p>Smt. Prabha Uppin began her entrepreneurial journey with home-based businesses — tailoring, saree design, a small flour mill, kirana store, and candle making.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot">🌱</div>
+            <div class="timeline-text">
+              <strong>Years of Growth</strong>
+              <p>Each business taught discipline, patience, customer service, and the value of honest work. Her husband Shri Manjunath Uppin supported every step of the way.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot">25</div>
+            <div class="timeline-text">
+              <strong>2025 — No.1 Agro Clean</strong>
+              <p>With years of dedication and family support, No.1 Agro Clean was launched at APMC Yard, Amargol, Hubli — helping farmers, traders, and wholesalers improve grain quality.</p>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:1.5rem; padding:1rem 1.25rem; background:rgba(200,147,42,0.08); border-left:3px solid var(--gold); border-radius:0 8px 8px 0;">
+          <p style="color:var(--text-mid); font-size:0.875rem; line-height:1.7;"><strong style="color:var(--dark-green);">Proprietor:</strong> Smt. Prabha Uppin<br><strong style="color:var(--dark-green);">Business:</strong> Shri Gururaghavendra Small Scale Industries</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOMERS -->
+<section class="customers">
+  <div class="container">
+    <div class="fade-in" style="text-align:center; max-width:600px; margin:0 auto;">
+      <div class="section-label" style="color:var(--gold-light); justify-content:center;">Who We Serve</div>
+      <h2 class="section-title" style="color:#fff;">Serving Farmers, Traders<br><span style="color:var(--gold-light)">&amp; Wholesalers</span></h2>
+      <p style="color:rgba(255,255,255,0.6); font-size:0.95rem; margin-top:0.5rem;">Whether you have a small quantity or a regular bulk requirement, No.1 Agro Clean is ready to serve you.</p>
+    </div>
+    <div class="customers-grid fade-in">
+      <div class="customer-chip">
+        <div class="customer-icon">🧑‍🌾</div>
+        <p>Farmers</p>
+      </div>
+      <div class="customer-chip">
+        <div class="customer-icon">🏪</div>
+        <p>APMC Traders</p>
+      </div>
+      <div class="customer-chip">
+        <div class="customer-icon">🏢</div>
+        <p>Wholesalers</p>
+      </div>
+      <div class="customer-chip">
+        <div class="customer-icon">🛒</div>
+        <p>Retailers</p>
+      </div>
+      <div class="customer-chip">
+        <div class="customer-icon">🌾</div>
+        <p>Food Grain Businesses</p>
+      </div>
+      <div class="customer-chip">
+        <div class="customer-icon">🚜</div>
+        <p>Agricultural Traders</p>
+      </div>
+      <div class="customer-chip">
+        <div class="customer-icon">📦</div>
+        <p>Small Businesses</p>
+      </div>
+      <div class="customer-chip">
+        <div class="customer-icon">⚖️</div>
+        <p>Bulk Customers</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-label">Gallery</div>
+      <h2 class="section-title">Our Facility &<br><span>Machines at Work</span></h2>
+      <p class="section-body">Transparent and honest work. See our facility, machines, and the cleaning process.</p>
+    </div>
+    <div class="gallery-grid fade-in" style="margin-top:2.5rem;">
+      <div class="gallery-item">
+        <img src="WhatsApp_Image_2026-05-21_at_11_00_51_AM.jpeg" alt="No.1 Agro Clean Facility Exterior" onerror="this.style.background='#2d5a3d'">
+        <div class="gallery-label">Our Facility — C-22, APMC Yard, Amargol, Hubli</div>
+      </div>
+      <div class="gallery-item">
+        <img src="WhatsApp_Image_2026-05-21_at_11_00_50_AM__1_.jpeg" alt="Grain Cleaning Machine" onerror="this.style.background='#1a3a2a'">
+        <div class="gallery-label">Destoner & Cleaning Machine</div>
+      </div>
+      <div class="gallery-item">
+        <img src="WhatsApp_Image_2026-05-21_at_11_00_49_AM__1__-_Copy.jpeg" alt="Grain Grading Machine" onerror="this.style.background='#4a8a5e'">
+        <div class="gallery-label">Grading Machine</div>
+      </div>
+      <div class="gallery-item">
+        <img src="WhatsApp_Image_2026-05-21_at_11_00_50_AM.jpeg" alt="Processing Area" onerror="this.style.background='#2d5a3d'">
+        <div class="gallery-label">Processing Area</div>
+      </div>
+      <div class="gallery-item">
+        <img src="WhatsApp_Image_2026-05-21_at_11_00_48_AM_-_Copy.jpeg" alt="Seed Cleaning Process" onerror="this.style.background='#1a3a2a'">
+        <div class="gallery-label">Seed Cleaning in Progress</div>
+      </div>
+      <div class="gallery-item">
+        <img src="Grains2.jpeg" alt="Various Grains" onerror="this.style.background='#c8932a'">
+        <div class="gallery-label">All Types of Seeds &amp; Grains Processed</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="fade-in">
+        <div class="section-label">Trust & Credentials</div>
+        <h2 class="section-title">Trusted, Registered<br><span>&amp; Locally Rooted</span></h2>
+        <p class="section-body">We are a registered, FSSAI-licensed business operating from APMC Yard, Amargol, Hubli — committed to transparency and honest service.</p>
+        <div class="trust-badges">
+          <div class="trust-badge"><span class="trust-badge-icon">✅</span> GSTIN Registered</div>
+          <div class="trust-badge"><span class="trust-badge-icon">🏛️</span> FSSAI Licensed</div>
+          <div class="trust-badge"><span class="trust-badge-icon">📍</span> APMC Yard Based</div>
+          <div class="trust-badge"><span class="trust-badge-icon">⚖️</span> Fair Pricing</div>
+        </div>
+        <div class="kannada-block" style="margin-top:1.5rem;">
+          <p>ಎಲ್ಲಾ ತರಹದ ಬೀಜ ಮತ್ತು ಧಾನ್ಯಗಳ ಶುಚಿಗೊಳಿಸುವಿಕೆ ಮತ್ತು ಸಂಸ್ಕರಣೆ</p>
+          <p style="margin-top:0.4rem;">ಕೃಷಿಕರು, ವ್ಯಾಪಾರಿಗಳು ಮತ್ತು ಹೋಲ್‌ಸೇಲ್ ವ್ಯಾಪಾರಿಗಳಿಗೆ ನಂಬಿಗಸ್ತ ಕ್ಲೀನಿಂಗ್ ಮತ್ತು ಗ್ರೇಡಿಂಗ್ ಸೇವೆ.</p>
+        </div>
+      </div>
+      <div class="fade-in">
+        <div class="trust-details">
+          <div style="margin-bottom:1rem;">
+            <p style="color:var(--gold-light); font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:600; margin-bottom:0.25rem;">Business Information</p>
+            <p style="color:rgba(255,255,255,0.45); font-size:0.75rem;">Shri Gururaghavendra Small Scale Industries</p>
+          </div>
+          <div class="trust-detail-row">
+            <span class="trust-detail-label">Brand Name</span>
+            <span class="trust-detail-val">No.1 Agro Clean</span>
+          </div>
+          <div class="trust-detail-row">
+            <span class="trust-detail-label">Proprietor</span>
+            <span class="trust-detail-val">Smt. Prabha Uppin</span>
+          </div>
+          <div class="trust-detail-row">
+            <span class="trust-detail-label">GSTIN</span>
+            <span class="trust-detail-val">29ACGPU3065M1ZX</span>
+          </div>
+          <div class="trust-detail-row">
+            <span class="trust-detail-label">FSSAI</span>
+            <span class="trust-detail-val" style="color:#4ade80;">Licensed ✓</span>
+          </div>
+          <div class="trust-detail-row">
+            <span class="trust-detail-label">Phone</span>
+            <span class="trust-detail-val">+91 8880669590 / 9986779287</span>
+          </div>
+          <div class="trust-detail-row">
+            <span class="trust-detail-label">Address</span>
+            <span class="trust-detail-val">C-22, APMC Yard, Amargol, Hubli — 580025</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div>
+      <h2 class="cta-title">Want to Clean or Grade Your Seeds and Grains?</h2>
+      <p class="cta-sub">Bring your goods to No.1 Agro Clean and get professional cleaning, grading, destoning, processing, and packing services at affordable prices.</p>
+      <div class="cta-location" style="margin-top:0.75rem;">
+        📍 C-22, APMC Yard, Amargol, Hubli — 580025
+      </div>
+    </div>
+    <div class="cta-actions">
+      <a href="tel:+918880669590" class="btn-dark">📞 +91 8880669590</a>
+      <a href="tel:+919986779287" class="btn-dark">📞 +91 9986779287</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="fade-in" style="margin-bottom:3rem;">
+      <div class="section-label">Get in Touch</div>
+      <h2 class="section-title">Request a <span>Call Back</span></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-form fade-in">
+        <h3 class="form-title">Send Us Your Details</h3>
+        <form onsubmit="handleForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label>Mobile Number</label>
+              <input type="tel" placeholder="+91 XXXXX XXXXX" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Type of Seeds / Grains</label>
+              <input type="text" placeholder="e.g. Wheat, Coriander, Maize">
+            </div>
+            <div class="form-group">
+              <label>Approximate Quantity</label>
+              <input type="text" placeholder="e.g. 5 quintals">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Service Required</label>
+            <select>
+              <option value="">Select a service</option>
+              <option>Seed Cleaning</option>
+              <option>Grain Cleaning</option>
+              <option>Destoning</option>
+              <option>Grading</option>
+              <option>Processing & Packing</option>
+              <option>Multiple Services</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message (Optional)</label>
+            <textarea placeholder="Any specific requirements or questions..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Submit Enquiry →</button>
+        </form>
+        <div id="form-success" style="display:none; margin-top:1rem; padding:0.75rem 1rem; background:#f0fdf4; border:1px solid #86efac; border-radius:8px; color:#166534; font-size:0.875rem;">
+          ✅ Thank you! We'll call you back soon. You can also reach us at +91 8880669590.
+        </div>
+      </div>
+      <div class="contact-info fade-in">
+        <h3 style="font-family:'Playfair Display',serif; font-size:1.4rem; color:var(--dark-green); margin-bottom:1.5rem;">Contact Details</h3>
+        <div class="info-card">
+          <div class="info-card-label">Phone Numbers</div>
+          <div class="info-card-val">
+            <a href="tel:+918880669590">+91 8880669590</a><br>
+            <a href="tel:+919986779287">+91 9986779287</a>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-label">Address</div>
+          <div class="info-card-val">
+            C-22, APMC Yard, Amargol,<br>
+            Hubli — 580025, Karnataka
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-label">Business Name</div>
+          <div class="info-card-val">Shri Gururaghavendra Small Scale Industries</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-label">Proprietor</div>
+          <div class="info-card-val">Smt. Prabha Uppin</div>
+        </div>
+        <a href="https://wa.me/918880669590?text=Hello%20No.1%20Agro%20Clean%2C%20I%20want%20to%20know%20about%20seed%2Fgrain%20cleaning%20and%20processing%20service.%20Please%20share%20the%20pricing%20and%20details." target="_blank" style="display:flex; align-items:center; gap:10px; background:#25D366; color:white; text-decoration:none; padding:0.85rem 1.25rem; border-radius:10px; font-weight:600; font-size:0.9rem; margin-top:1rem; transition:all 0.2s;" onmouseover="this.style.background='#1ebe5d'" onmouseout="this.style.background='#25D366'">
+          <span style="font-size:1.2rem;">💬</span> Chat on WhatsApp
+        </a>
+        <div class="kannada-block">
+          <p>ಕಡಿಮೆ ದರದಲ್ಲಿ ಗುಣಮಟ್ಟದ ಬೀಜ ಮತ್ತು ಧಾನ್ಯ ಸಂಸ್ಕರಣೆ ಸೇವೆ.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-about">
+      <div class="footer-logo">
+        <div class="footer-logo-circle">
+          <span>No.1</span>
+          <span>AGRO</span>
+        </div>
+        <div class="footer-brand-name">No.1 Agro Clean</div>
+      </div>
+      <p>A brand of Shri Gururaghavendra Small Scale Industries, providing cleaning, grading, destoning, processing, and packing services for all types of seeds and grains. We serve farmers, traders, wholesalers, APMC businesses, and food grain businesses with honest service and affordable pricing.</p>
+      <p style="margin-top:0.75rem; color:rgba(255,255,255,0.35); font-size:0.75rem;">GSTIN: 29ACGPU3065M1ZX &nbsp;·&nbsp; FSSAI Licensed</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <div class="footer-contact-item">
+        <span>Phone</span>
+        <a href="tel:+918880669590">+91 8880669590</a>
+        <a href="tel:+919986779287">+91 9986779287</a>
+      </div>
+      <div class="footer-contact-item">
+        <span>Address</span>
+        <p>C-22, APMC Yard, Amargol,<br>Hubli — 580025, Karnataka</p>
+      </div>
+      <div class="footer-contact-item">
+        <span>Proprietor</span>
+        <p>Smt. Prabha Uppin</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Shri Gururaghavendra Small Scale Industries. All rights reserved. Brand: No.1 Agro Clean.</p>
+    <p class="gstin">GSTIN: 29ACGPU3065M1ZX &nbsp;·&nbsp; FSSAI Licensed</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/918880669590?text=Hello%20No.1%20Agro%20Clean%2C%20I%20want%20to%20know%20about%20seed%2Fgrain%20cleaning%20and%20processing%20service.%20Please%20share%20the%20pricing%20and%20details." class="wa-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+  function handleForm(e) {
+    e.preventDefault();
+    document.getElementById('form-success').style.display = 'block';
+    e.target.reset();
+  }
+  // Fade-in on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(el => {
+      if (el.isIntersecting) { el.target.classList.add('visible'); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
