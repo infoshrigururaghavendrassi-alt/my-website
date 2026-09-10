@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://no1agroclean.in/sitemap.xml
